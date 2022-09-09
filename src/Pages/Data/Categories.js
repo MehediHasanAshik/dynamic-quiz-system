@@ -1,0 +1,27 @@
+const Categories = [
+  { category: "General Knowledge", value: "General Knowledge" },
+  { category: "Books", value: "Books" },
+  { category: "Films", value: "Films" },
+  { category: "Music", value: "Music" },
+  { category: "Musicals and Theaters", value: "Musicals and Theaters" },
+  { category: "Television", value: "Television" },
+  { category: "Video Games", value: "Video Games" },
+  { category: "Board Games", value: "Board Games" },
+  { category: "Science and Nature", value: "Science and Nature" },
+  { category: "Computer", value: "Computer" },
+  { category: "Mathematics", value: "Mathematics" },
+  { category: "Mythology", value: "Mythology" },
+  { category: "Sports", value: "Sports" },
+  { category: "Geography", value: "Geography" },
+  { category: "History", value: "History" },
+  { category: "Politics", value: "Politics" },
+  { category: "Celebrities", value: "Celebrities" },
+  { category: "Animals", value: "Animals" },
+  { category: "Vehicles", value: "Vehicles" },
+  { category: "Comics", value: "Comics" },
+  { category: "Gadgets", value: "Gadgets" },
+  { category: "Japanese Anime", value: "Japanese Anime" },
+  { category: "Cartoon and Animations", value: "Cartoon and Animations" },
+];
+
+export default Categories;

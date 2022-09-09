@@ -1,0 +1,75 @@
+const Quizzes = {
+  results: [
+    {
+      category: "Geography",
+      correct_answer: "195",
+      difficulty: "medium",
+      incorrect_answers: ["201", "153", "178"],
+      question: "How many sovereign states are members of the United Nations?",
+    },
+    {
+      category: "Geography",
+      correct_answer: "195",
+      difficulty: "medium",
+      incorrect_answers: ["201", "153", "178"],
+      question: "How many sovereign states are members of the United Nations?",
+    },
+    {
+      category: "Geography",
+      correct_answer: "195",
+      difficulty: "medium",
+      incorrect_answers: ["201", "153", "178"],
+      question: "How many sovereign states are members of the United Nations?",
+    },
+    {
+      category: "Geography",
+      correct_answer: "195",
+      difficulty: "medium",
+      incorrect_answers: ["201", "153", "178"],
+      question: "How many sovereign states are members of the United Nations?",
+    },
+    {
+      category: "Geography",
+      correct_answer: "195",
+      difficulty: "medium",
+      incorrect_answers: ["201", "153", "178"],
+      question: "How many sovereign states are members of the United Nations?",
+    },
+    {
+      category: "Geography",
+      correct_answer: "195",
+      difficulty: "medium",
+      incorrect_answers: ["201", "153", "178"],
+      question: "How many sovereign states are members of the United Nations?",
+    },
+    {
+      category: "Geography",
+      correct_answer: "195",
+      difficulty: "medium",
+      incorrect_answers: ["201", "153", "178"],
+      question: "How many sovereign states are members of the United Nations?",
+    },
+    {
+      category: "Geography",
+      correct_answer: "195",
+      difficulty: "medium",
+      incorrect_answers: ["201", "153", "178"],
+      question: "How many sovereign states are members of the United Nations?",
+    },
+    {
+      category: "Geography",
+      correct_answer: "195",
+      difficulty: "medium",
+      incorrect_answers: ["201", "153", "178"],
+      question: "How many sovereign states are members of the United Nations?",
+    },
+    {
+      category: "Geography",
+      correct_answer: "195",
+      difficulty: "medium",
+      incorrect_answers: ["201", "153", "178"],
+      question: "How many sovereign states are members of the United Nations?",
+    },
+
+  ],
+};
