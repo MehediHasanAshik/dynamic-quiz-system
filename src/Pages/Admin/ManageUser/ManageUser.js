@@ -7,7 +7,7 @@ const ManageUser = () => {
     const [user, setUser] = useState([]);
 
     useEffect(()=> {
-        fetch('http://localhost:5000/users')
+        fetch('https://shrouded-temple-83886.herokuapp.com/users')
         .then(res => res.json())
         .then(data => setUser(data))
     }, [])

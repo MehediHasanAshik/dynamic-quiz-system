@@ -27,7 +27,7 @@ const AddQuiz = () => {
     formData.append("incorrect_answers", wrongAns2);
     formData.append("incorrect_answers", wrongAns3);
 
-    fetch(`http://localhost:5000/quizzes`, {
+    fetch(`https://shrouded-temple-83886.herokuapp.com/quizzes`, {
       method: "POST",
       body: formData,
     })

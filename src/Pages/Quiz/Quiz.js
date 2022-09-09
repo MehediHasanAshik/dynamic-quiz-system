@@ -16,7 +16,7 @@ const Quiz = () => {
   console.log(category, difficulty)
 
   useEffect(() => {
-    const url = `http://localhost:5000/quizzes?category=${category}&difficulty=${difficulty}`;
+    const url = `https://shrouded-temple-83886.herokuapp.com/quizzes?category=${category}&difficulty=${difficulty}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setQuestions(data));
