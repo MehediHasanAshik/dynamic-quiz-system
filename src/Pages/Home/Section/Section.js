@@ -41,7 +41,7 @@ const Section = () => {
         variant="outlined"
         onChange={(e) => setCategory(e.target.value)}
         value={category}
-        style={{ marginBottom: 30, width: "30%" }}
+        style={{ marginBottom: 30, width: "40%" }}
       >
         {Categories.map((cat) => (
           <MenuItem key={cat.category} value={cat.value}>
@@ -58,7 +58,7 @@ const Section = () => {
         variant="outlined"
         onChange={(e) => setDifficulty(e.target.value)}
         value={difficulty}
-        style={{ marginBottom: 30, width: "30%" }}
+        style={{ marginBottom: 30, width: "40%" }}
       >
         <MenuItem key="Easy" value="easy">
           Easy

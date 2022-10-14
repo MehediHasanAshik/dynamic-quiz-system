@@ -16,14 +16,18 @@ const Banner = () => {
         >
           <Grid item xs={12} md={6}>
             <Box>
-              <h1>Welcome to the Dynamic Quiz System</h1>
-              <h4>
+              <h1>
+                Welcome to the <br />
+                <span style={{ color: "tomato" }}>Dynamic Quiz System</span>
+              </h1>
+              <p style={{ fontWeight: 500, fontSize: "20px" }}>
                 Here, You can perform quiz tests and justify your knowledge
-              </h4>
+                Select any category and difficulty and start your quiz
+              </p>
             </Box>
           </Grid>
           <Grid item sx={{ py: 3 }} xs={12} md={6}>
-            <img width="90%" src={header} alt="" />
+            <img style={{borderRadius: '5px'}} width="90%" src={header} alt="" />
           </Grid>
         </Box>
       </Grid>

@@ -44,7 +44,7 @@ function App() {
                 path="manageUser"
                 element={
                   <AdminRoute>
-                    <ManageUser/>
+                    <ManageUser />
                   </AdminRoute>
                 }
               />

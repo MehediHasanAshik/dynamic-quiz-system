@@ -13,26 +13,28 @@ const Quiz = () => {
   const { state } = useLocation();
   const { category, difficulty } = state;
 
-  console.log(category, difficulty)
+  // console.log(category, difficulty);
 
   useEffect(() => {
-    const url = `https://shrouded-temple-83886.herokuapp.com/quizzes?category=${category}&difficulty=${difficulty}`;
+    // const url = `https://shrouded-temple-83886.herokuapp.com/quizzes?category=${category}&difficulty=${difficulty}`;
+
+    const url = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`;
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setQuestions(data));
-  }, []);
+      .then((data) => setQuestions(data.results));
+  }, [category, difficulty]);
 
   useEffect(() => {
     setOptions(
       questions &&
-        handleSuffle([
+        handleShuffle([
           questions[currQues]?.correct_answer,
           ...questions[currQues]?.incorrect_answers,
         ])
     );
   }, [questions, currQues]);
 
-  const handleSuffle = (option) => {
+  const handleShuffle = (option) => {
     return option.sort(() => Math.random() - 0.5);
   };
 
