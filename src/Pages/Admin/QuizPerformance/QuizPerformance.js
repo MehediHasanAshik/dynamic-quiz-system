@@ -17,7 +17,7 @@ const QuizPerformance = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/quizInfo")
+    fetch("https://shrouded-temple-83886.herokuapp.com/quizInfo")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);

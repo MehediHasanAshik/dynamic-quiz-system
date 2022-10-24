@@ -73,7 +73,7 @@ const Questions = ({
       amount,
       score,
     };
-    fetch("http://localhost:5000/quizInfo", {
+    fetch("https://shrouded-temple-83886.herokuapp.com/quizInfo", {
       method: "POST",
       headers: {
         "content-type": "application/json",
