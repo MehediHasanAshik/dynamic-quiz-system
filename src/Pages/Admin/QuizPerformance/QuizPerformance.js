@@ -50,8 +50,8 @@ const QuizPerformance = () => {
                 </TableCell>
                 <TableCell align="center">{row.category}</TableCell>
                 <TableCell align="center">{row.difficulty}</TableCell>
-                <TableCell align="center">{row.score}</TableCell>
                 <TableCell align="center">{row.amount}</TableCell>
+                <TableCell align="center">{row.score}</TableCell>
               </TableRow>
             ))}
           </TableBody>
