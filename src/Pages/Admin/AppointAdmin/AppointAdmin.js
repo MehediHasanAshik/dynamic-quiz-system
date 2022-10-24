@@ -1,6 +1,7 @@
 import { Alert, Button, TextField } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useState } from "react";
+import ManageUser from "../ManageUser/ManageUser";
 
 const AppointAdmin = () => {
   const [email, setEmail] = useState("");
@@ -66,6 +67,8 @@ const AppointAdmin = () => {
           Make Admin
         </Button>
       </form>
+      <br />
+      <ManageUser/>
     </Container>
   );
 };

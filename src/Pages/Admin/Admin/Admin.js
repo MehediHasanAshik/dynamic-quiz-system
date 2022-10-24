@@ -53,9 +53,9 @@ const Admin = () => {
                 <Button sx={{ my: 1, width: '30%' }} variant="contained">
                   <Link
                     style={{ textDecoration: "none", color: "black" }}
-                    to="manageUser"
+                    to="quizPerformance"
                   >
-                    Manage User
+                    Quiz Performance
                   </Link>
                 </Button>
               </Box>

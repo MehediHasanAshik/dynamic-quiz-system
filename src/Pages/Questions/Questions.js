@@ -1,13 +1,25 @@
-import { Alert, Box, Button, Grid } from "@mui/material";
+import { Alert, Box, Button, Grid, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 import Timer from "../TImer/Timer";
 
-const Questions = ({ currQues, setCurrQues, questions, options, correct }) => {
+const Questions = ({
+  amount,
+  currQues,
+  setCurrQues,
+  questions,
+  options,
+  correct,
+  difficulty,
+  cat,
+}) => {
   const [selected, setSelected] = useState();
   const [error, SetError] = useState("");
   const [score, setScore] = useState(0);
+
+  const { user } = useAuth();
 
   const navigate = useNavigate();
 
@@ -42,7 +54,8 @@ const Questions = ({ currQues, setCurrQues, questions, options, correct }) => {
   };
 
   const handleNext = () => {
-    if (currQues > 8) {
+    if (currQues > amount - 2) {
+      saveQuizInfo(cat, difficulty, amount, score);
       navigate("/result", { state: { score } });
     } else if (selected) {
       setCurrQues(currQues + 1);
@@ -52,24 +65,62 @@ const Questions = ({ currQues, setCurrQues, questions, options, correct }) => {
     }
   };
 
+  const saveQuizInfo = (category, difficulty, amount, score) => {
+    const quizInfo = {
+      name: user.displayName,
+      category,
+      difficulty,
+      amount,
+      score,
+    };
+    fetch("http://localhost:5000/quizInfo", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(quizInfo),
+    }).then();
+  };
+
   return (
     <Container sx={{ mb: 5 }}>
-      <h1>Question {currQues + 1} </h1>
+      <h1 style={{ color: "#315741" }}>Question : {currQues + 1} </h1>
       <Box>
-        <h3
-          style={{
-            padding: "10px 15px",
-            backgroundColor: "darkgrey",
-            borderRadius: "5px",
-            display: "inline",
+        <Typography
+          variant="h5"
+          sx={{
+            padding: "10px",
+            width: '50%',
+            m: 'auto',
+            backgroundColor: "DarkCyan",
+            fontWeight: 600,
           }}
         >
           Score : {score}
-        </h3>
-        <h4>
-          Time Left: <Timer score={score}/> Sec
-        </h4>
-        <h4>{questions[currQues]?.question}</h4>
+        </Typography>
+
+        <Box
+          sx={{
+            m: "auto",
+            my: 1,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: 80,
+            width: 80,
+            backgroundColor: "#315741",
+            color: "white",
+            borderRadius: "50%",
+          }}
+        >
+          <Typography variant="h5" sx={{ fontWeight: 600 }}>
+            <Timer score={score} difficulty={difficulty} />
+          </Typography>
+        </Box>
+
+        <Typography variant="h6" sx={{ fontWeight: 500, mb: 2 }}>
+          {questions[currQues]?.question}
+        </Typography>
         <Box>
           {error && (
             <Alert sx={{ width: "50%", m: "auto", my: 2 }} severity="error">
@@ -92,8 +143,9 @@ const Questions = ({ currQues, setCurrQues, questions, options, correct }) => {
                   sx={{
                     width: "50%",
                     mb: 2,
+                    color: "black",
                   }}
-                  variant="contained"
+                  variant="outlined"
                   onClick={() => handleCheck(op)}
                   style={selected && handleSelect(op)}
                   disabled={selected}

@@ -86,12 +86,12 @@ const useFirebase = () => {
     return () => unsubscribe;
   }, [auth]);
 
-  //show if Admin or Not 
-  useEffect(()=> {
+  //show if Admin or Not
+  useEffect(() => {
     fetch(`https://shrouded-temple-83886.herokuapp.com/users/${user.email}`)
-    .then(res => res.json())
-    .then(data => setAdmin(data.admin))
-  }, [user.email])
+      .then((res) => res.json())
+      .then((data) => setAdmin(data.admin));
+  }, [user.email]);
 
   const logout = () => {
     setIsLoading(true);
