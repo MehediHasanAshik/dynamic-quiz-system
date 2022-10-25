@@ -5,7 +5,7 @@ import header from "../../../Images/header.jpg";
 
 const Banner = () => {
   return (
-    <Container sx={{ width: "90%" }}>
+    <Container sx={{ width: { xs: "95%", sm: "90%", md: "90%" } }}>
       <Box
         sx={{
           display: "flex",
@@ -20,8 +20,8 @@ const Banner = () => {
               <span style={{ color: "#315741" }}>Dynamic Quiz System</span>
             </h1>
             <p style={{ fontWeight: 500, fontSize: "20px" }}>
-              Here, You can perform quiz tests and justify your knowledge Select
-              any category and difficulty and start your quiz
+              Here, You can perform quiz tests and justify your knowledge <br />{" "}
+              Select any category and difficulty and start your quiz
             </p>
           </Box>
         </Grid>

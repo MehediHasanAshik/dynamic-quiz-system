@@ -8,7 +8,7 @@ const Admin = () => {
   const { admin } = useAuth();
 
   return (
-    <Container sx={{px: 5, my: 2 }}>
+    <Container sx={{ px: { xs: 0, sm: 5, md: 5 }, my: 2 }}>
       <Box>
         <Grid container spacing={2}>
           <Grid md={6} xs={12}>
@@ -32,7 +32,10 @@ const Admin = () => {
             {admin && (
               <Box sx={{ mt: 4 }}>
                 <h3>Operations: </h3>
-                <Button sx={{ my: 1, width: '30%' }} variant="contained">
+                <Button
+                  sx={{ my: 1, width: { xs: "50%", sm: "40%", md: "40%" } }}
+                  variant="contained"
+                >
                   <Link
                     style={{ textDecoration: "none", color: "black" }}
                     to="appointAdmin"
@@ -41,7 +44,7 @@ const Admin = () => {
                   </Link>
                 </Button>
                 <br />
-                <Button sx={{ my: 1, width: '30%' }} variant="contained">
+                <Button sx={{ my: 1, width: { xs: "50%", sm: "40%", md: "40%" } }} variant="contained">
                   <Link
                     style={{ textDecoration: "none", color: "black" }}
                     to="addQuiz"
@@ -50,7 +53,7 @@ const Admin = () => {
                   </Link>
                 </Button>
                 <br />
-                <Button sx={{ my: 1, width: '30%' }} variant="contained">
+                <Button sx={{ my: 1, width: { xs: "50%", sm: "40%", md: "40%" } }} variant="contained">
                   <Link
                     style={{ textDecoration: "none", color: "black" }}
                     to="quizPerformance"
