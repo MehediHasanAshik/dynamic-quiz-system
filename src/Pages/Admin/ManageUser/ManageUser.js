@@ -19,7 +19,7 @@ const ManageUser = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://shrouded-temple-83886.herokuapp.com/users")
+    fetch("https://dynamicquizsystem.up.railway.app/users")
       .then((res) => res.json())
       .then((data) => setUser(data))
       .finally(() => setLoading(false));

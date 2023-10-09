@@ -17,7 +17,7 @@ const QuizPerformance = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("https://shrouded-temple-83886.herokuapp.com/quizInfo")
+    fetch("https://dynamicquizsystem.up.railway.app/quizInfo")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);

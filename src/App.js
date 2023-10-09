@@ -17,16 +17,16 @@ import Nav from "./Pages/Shared/Nav/Nav";
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <AuthProvider>
         <Router>
           <Nav />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/admin" element={<Admin />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/admin' element={<Admin />}>
               <Route
-                path="appointAdmin"
+                path='appointAdmin'
                 element={
                   <AdminRoute>
                     <AppointAdmin />
@@ -34,7 +34,7 @@ function App() {
                 }
               />
               <Route
-                path="addQuiz"
+                path='addQuiz'
                 element={
                   <AdminRoute>
                     <AddQuiz />
@@ -42,7 +42,7 @@ function App() {
                 }
               />
               <Route
-                path="quizPerformance"
+                path='quizPerformance'
                 element={
                   <AdminRoute>
                     <QuizPerformance />
@@ -50,17 +50,17 @@ function App() {
                 }
               />
             </Route>
-            <Route path="/result" element={<Result />} />
+            <Route path='/result' element={<Result />} />
             <Route
-              path="/quiz"
+              path='/quiz'
               element={
                 <PrivateRoute>
                   <Quiz />
                 </PrivateRoute>
               }
             />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
           </Routes>
         </Router>
       </AuthProvider>

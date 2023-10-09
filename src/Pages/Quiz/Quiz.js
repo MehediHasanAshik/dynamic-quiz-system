@@ -14,7 +14,7 @@ const Quiz = () => {
   const { state } = useLocation();
   const { category, difficulty, amount } = state;
 
-  // const url = `https://shrouded-temple-83886.herokuapp.com/quizzes?category=${category}&difficulty=${difficulty}`;
+  // const url = `https://dynamicquizsystem.up.railway.app/quizzes?category=${category}&difficulty=${difficulty}`;
   useEffect(() => {
     const url = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
     fetch(url)

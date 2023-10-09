@@ -15,7 +15,7 @@ const AppointAdmin = () => {
 
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("https://shrouded-temple-83886.herokuapp.com/users/admin", {
+    fetch("https://dynamicquizsystem.up.railway.app/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

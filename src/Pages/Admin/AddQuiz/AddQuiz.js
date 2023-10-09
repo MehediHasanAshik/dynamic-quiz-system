@@ -27,7 +27,7 @@ const AddQuiz = () => {
     formData.append("incorrect_answers", wrongAns2);
     formData.append("incorrect_answers", wrongAns3);
 
-    fetch(`https://shrouded-temple-83886.herokuapp.com/quizzes`, {
+    fetch(`https://dynamicquizsystem.up.railway.app/quizzes`, {
       method: "POST",
       body: formData,
     })
